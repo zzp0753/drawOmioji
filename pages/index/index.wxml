@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="headinfo">阴阳师抽卡实战模拟</view>
+  <view  bindtap="bindViewTap1" class="userinfo">
+
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName + ', welcome.'}}</text>
+    
+  </view>
+  <button bindtap="drawHistory">SR以及上抽卡历史</button>
+
+  <view class="draw-tmp">
+    <image src='{{drawResLink || \'image/blueGuy.jpg\'}}'>&nbsp;</image>
+  </view>
+
+  <view class="usermotto">
+    <!-- <button bindtap='draw'>点就抽蓝符</button> -->
+    <view class="randomText">{{drawResult || '召唤结果'}} </view>
+  </view>
+  
+      <view class="canvas_area">
+      <image src="image/drawBg1.png"></image>
+        <!--注意：同一页面中的 canvas-id 不可重复，如果使用一个已经出现过的 canvas-id，该 canvas 标签对应的画布将被隐藏并不再正常工作-->
+        <canvas canvas-id="myCanvas" class="myCanvas"
+            disable-scroll="false"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd"
+            >
+            <!-- style="background: url('image/drawBg1.png') no-repeat center center;background-size: cover;" -->
+        </canvas>
+    </view>
+
+</view>

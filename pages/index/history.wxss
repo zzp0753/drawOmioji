@@ -1,0 +1,6 @@
+/* pages/index/history.wxss */
+
+view{
+    text-align: center;
+    font-family: Georgia;
+}

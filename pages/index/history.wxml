@@ -1,0 +1,11 @@
+<!--pages/index/history.wxml-->
+<!-- <text>pages/index/history.wxml</text> -->
+<view class="mySSRs" wx:for="{{mySSRs}}">{{item}}</view>
+
+<view class="myInfos">总共抽卡:{{sumTimes}}次</view>
+<view class="myInfos">其中成功召唤SSR:{{SSRTimes}}次</view>
+<view class="myInfos">SR:{{SRTimes}}次</view>
+
+<view>以下为所有SR及以上抽卡历史</view>
+
+<view class="mySRs" wx:for="{{niceCards}}">{{item}}</view>
